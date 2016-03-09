@@ -15,9 +15,8 @@ public class Aciertos {
         //System.out.print(x);
         Scanner sc = new Scanner(System.in);
         do {
-            System.out.print("\nIntroduce el valor de X: ");
-            
-            n = pideNumero(sc);
+            pideNumero();
+            n = sc.nextInt();
             cont++;
             
         } while (compara(n,x)==false);
@@ -25,16 +24,13 @@ public class Aciertos {
 
     }
 /**
- * metodo que captura el numero introducido por el usuario
- * @param sc almacena el valor introducido por el usuario
- * @return devuelve el valor introducido por el usuario
+ * metodo que imprime el texto para que el usuario intrudozca el numero
  */
 
-	private static int pideNumero(Scanner sc) {
-		int n;
-		n = sc.nextInt();
-		return n;
+	private static void pideNumero() {
+		System.out.print("\nIntroduce el valor de X: ");
 	}
+	
 	/**
 	 * metodo que compara el valor aleatorio con el introducido por el usuario
 	 * 
